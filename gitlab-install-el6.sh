@@ -108,7 +108,7 @@ echo "CREATE USER 'gitlab'@'localhost' IDENTIFIED BY '$MYSQL_PW';" | mysql -u ro
 echo "CREATE DATABASE IF NOT EXISTS gitlabhq_production DEFAULT CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci';" | mysql -u root
 
 ## Set MySQL root password in MySQL
-echo "GRANT SELECT, LOCK TABLES, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER ON gitlabhq_production.* TO 'gitlab'@'localhost';" | mysql -u root
+echo "GRANT SELECT, LOCK TABLES, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER ON gitlabhq_production.* TO 'gitlab'@'%';" | mysql -u root
 
 # GitLab
 cd /home/git
